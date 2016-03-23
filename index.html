@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/inputViewer.js" defer></script>
+    <script src="js/calculator.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <div class="calc_container" view-component="calculator">
+      <div class="input_container" view-component="input_viewer">
+        <input type="text" data-selector="full_input">
+        <input type="text" data-selector="current_input" value="0">
+      </div>
+      <div class="buttons_container" data-selector="buttons">
+        <div class="service_container">
+          <button type="button" class="button" data-selector="button">Clear</button>
+          <button type="button" class="button" data-selector="button">Backspace</button>
+          <button type="button" class="button" data-selector="button">+/-</button>
+        </div>
+        <div class="numbers_container">
+          <button type="button" class="button" data-selector="button">7</button>
+          <button type="button" class="button" data-selector="button">8</button>
+          <button type="button" class="button" data-selector="button">9</button>
+          <button type="button" class="button" data-selector="button">4</button>
+          <button type="button" class="button" data-selector="button">5</button>
+          <button type="button" class="button" data-selector="button">6</button>
+          <button type="button" class="button" data-selector="button">1</button>
+          <button type="button" class="button" data-selector="button">2</button>
+          <button type="button" class="button" data-selector="button">3</button>
+          <button type="button" class="button" data-selector="button">0</button>
+          <button type="button" class="button" data-selector="button">.</button>
+        </div>
+        <div class="operations_container">
+          <button type="button" class="button" data-selector="button">/</button>
+          <button type="button" class="button" data-selector="button">*</button>
+          <button type="button" class="button" data-selector="button">-</button>
+          <button type="button" class="button" data-selector="button">+</button>
+          <button type="button" class="button" data-selector="button">=</button>
+        </div>
+        <button type="button" class="button"></button>
+      </div>
+      <button type="button"></button>
+    </div>
+  </body>
+</html>
