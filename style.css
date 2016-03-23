@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  display: inline-block;
+}
+
+.buttons_container {
+  display: inline-block;
+}
+
+.service_container, .numbers_container, .operations_container {
+  text-align: center;
+}
