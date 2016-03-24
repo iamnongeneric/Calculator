@@ -2,6 +2,8 @@
 
 var InputViewer = (function () {
 
+  var previouslyCalculated = false;
+
   function InputViewer(args) {
 
     this.viewElement = args.viewElement;
@@ -46,6 +48,11 @@ var InputViewer = (function () {
       this.setCurrentValue(0);
     }
 
+    if (previouslyCalculated && !isNaN(parseInt(data))) {
+      this.setCurrentValue(data);
+      previouslyCalculated = false;
+    }
+
     else if (data === "Backspace") {
 
       if (this.getCurrentValue() <= 1) {
@@ -59,7 +66,7 @@ var InputViewer = (function () {
     }
 
     else if (data === "+/-") {
-      var newValue = -1 * this.getCurrentValue();
+      var newValue = " " + (-1 * this.getCurrentValue());
       this.setCurrentValue(newValue);
     }
 
@@ -68,17 +75,21 @@ var InputViewer = (function () {
       var length = fullValue.length;
 
       if (isNaN(parseInt(fullValue[length - 1]))) {
-        var validInputValue = fullValue.slice(0,-1);
-        fullValue = validInputValue;
+        var currentValue = this.getCurrentValue().length === 0 ?
+                                0 : this.getCurrentValue();
+        fullValue += currentValue;
       }
 
       var showRes = new Function("return " + fullValue);
-      this.setCurrentValue(showRes());
+      var res = showRes();
+      this.setCurrentValue(res);
       this.setFullValue("");
+
+      previouslyCalculated = true;
     }
 
 
-    else if (isNaN(parseInt(data))){
+    else if (isNaN(parseInt(data)) && data !== "."){
 
       if (this.getCurrentValue() === 0) {
         return;
