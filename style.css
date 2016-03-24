@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+ background: #ecf0f1;
+}
+
+.calc_container {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.buttons_container {
+  width: 100%;
+  height: 80%;
+}
+
+.service_container > button, .numbers_container > button {
+  width: 26.65%;
+  height: 17.41vh;
+  margin: 0;
+  float: left;
+  font-size: 42px;
+  border-top: 0;
+  border-left: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  border-right: 0;
+  background: #bdc3c7;
+}
+
+.numbers_container > button {
+  background: #33ce74;
+}
+
+.numbers_container > button:last-child {
+  width: 53.3%;
+}
+
+.service_container > button:nth-child(2) {
+  font-size: 12px;
+}
+
+.service_container > button:first-child {
+  font-size: 24px;
+}
+
+.operations_container {
+  width: 20%;
+  height: 100%;
+  float: right;
+}
+
+.operations_container > button {
+  height: 17.52vh;
+  width: 100%;
+  font-size: 42px;
+  background: #e67e22;
+  color: #ffffff;
+  border-left: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-top: 0;
+}
+
+.input_container {
+  width: 100%;
+  float: right;
+}
+
+.input_container > input {
+  width: 100%;
+  background: #000000;
+  color: #ffffff;
+  text-align: right;
+  border-width: 0;
+}
+
+.full_input {
+  font-size: 24px;
+}
+
+.current_input {
+  font-size: 48px;
+}
